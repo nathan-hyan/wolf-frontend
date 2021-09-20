@@ -13,7 +13,10 @@ function LoadingSpinner({ loadingText = 'Cargando datos' }: Props) {
             <div className={styles.spinner} />
             <p className={styles.rclogoCenter} />
           </div>
-          <h1>{loadingText}...</h1>
+          <h1>
+            {loadingText}
+            ...
+          </h1>
         </div>
       </div>
       <div className={styles.backdrop} />

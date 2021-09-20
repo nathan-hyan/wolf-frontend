@@ -13,7 +13,7 @@ export const ROUTES = [
     component: Home,
     title: 'Routes:homeTitle',
     description: 'Routes:homeDescription',
-    displayOnNavbar: true
+    displayOnNavbar: true,
   },
   {
     exact: true,
@@ -21,7 +21,7 @@ export const ROUTES = [
     component: Store,
     title: 'Routes:storeTitle',
     description: 'Routes:storeDescription',
-    displayOnNavbar: true
+    displayOnNavbar: true,
   },
   {
     exact: true,
@@ -29,7 +29,7 @@ export const ROUTES = [
     component: Cart,
     title: 'Routes:cartTitle',
     description: 'Routes:cartDescription',
-    displayOnNavbar: true
+    displayOnNavbar: true,
   },
   {
     exact: true,
@@ -37,7 +37,7 @@ export const ROUTES = [
     component: Gratitude,
     title: 'Routes:gratitudeTitle',
     description: 'Routes:gratitudeDescription',
-    displayOnNavbar: false
+    displayOnNavbar: false,
   },
   {
     exact: true,
@@ -45,6 +45,6 @@ export const ROUTES = [
     component: ProductPage,
     title: 'Routes:productTitle',
     description: 'Routes:productDescription',
-    displayOnNavbar: false
-  }
+    displayOnNavbar: false,
+  },
 ];

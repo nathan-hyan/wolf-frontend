@@ -1,0 +1,12 @@
+@mixin flex ($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin backgroundImage ($url, $translucency: 0.95) {
+  background: linear-gradient(rgba($background, 0.95), rgba($background, $translucency)), url($url);
+  background-size: cover;
+  background-position: center;
+}

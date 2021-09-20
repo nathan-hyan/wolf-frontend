@@ -1,8 +1,8 @@
-@import 'scss/variables/colors';
-@import 'scss/variables/variables';
-@import 'scss/variables/mixins';
+@import 'scss/colors';
+@import 'scss/variables';
+@import 'scss/mixins';
 
-.separator  {
+.separator {
   margin: 15px 0;
   border: 1px solid $black;
 }

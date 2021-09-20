@@ -7,6 +7,7 @@ import styles from './styles.module.scss';
 
 interface Props {
   items?: Product[];
+  // eslint-disable-next-line no-unused-vars
   onChangePage: (items: Product[]) => void;
 }
 
@@ -30,7 +31,7 @@ export default function CustomPagination({ items = [], onChangePage }: Props) {
     pages: [],
     pageSize: 0,
     startPage: 0,
-    endPage: 0
+    endPage: 0,
   });
 
   const changePage = (page: number) => {

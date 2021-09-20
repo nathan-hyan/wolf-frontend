@@ -2,8 +2,6 @@ import Notifications from 'react-notify-toast';
 
 import Routes from 'components/Routes';
 
-import 'scss/application.scss';
-
 function App() {
   return (
     <>

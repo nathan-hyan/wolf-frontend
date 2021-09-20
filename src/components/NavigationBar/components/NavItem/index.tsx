@@ -13,7 +13,9 @@ interface Props {
   isActive?: boolean;
   isCart?: boolean;
 }
-function NavItem({ onClick, label, icon, isActive, isCart }: Props) {
+function NavItem({
+  onClick, label, icon, isActive, isCart,
+}: Props) {
   const { productList } = useContext(CartContext);
   const activation = () => {
     if (isActive) {
@@ -22,10 +24,14 @@ function NavItem({ onClick, label, icon, isActive, isCart }: Props) {
     onClick();
   };
   return (
-    <div title="item" onClick={activation}>
+    <div title="item" onClick={activation} role="alert">
       {label && <p className={`${isActive ? styles.active : ''} ${styles.label}`}>{label}</p>}
       {icon && <FontAwesomeIcon className={`${isActive ? styles.active : ''} ${styles.icon}`} icon={icon} />}
-      {isCart && productList.length ? <p className={styles.cartNumber}>{productList.length}</p> : <></>}
+      {isCart && productList.length ? (
+        <p className={styles.cartNumber}>
+          {productList.length}
+        </p>
+      ) : <></>}
     </div>
   );
 }

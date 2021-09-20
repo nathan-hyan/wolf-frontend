@@ -1,6 +1,6 @@
-@import 'scss/variables/colors';
-@import 'scss/variables/variables';
-@import 'scss/variables/mixins';
+@import 'scss/colors';
+@import 'scss/variables';
+@import 'scss/mixins';
 
 .spinner {
   width: 4rem;
@@ -34,7 +34,9 @@
 
 .container {
   position: absolute;
+
   @include flex(center, center, column);
+
   height: 100vh;
   width: 100vw;
   left: 0;
@@ -43,6 +45,7 @@
 
 .spinnerContainer {
   @include flex(center, center, column);
+
   text-align: center;
   position: fixed;
   height: auto;

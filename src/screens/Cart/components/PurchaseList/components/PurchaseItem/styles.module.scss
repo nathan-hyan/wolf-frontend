@@ -1,6 +1,6 @@
-@import 'scss/variables/colors';
-@import 'scss/variables/variables';
-@import 'scss/variables/mixins';
+@import 'scss/colors';
+@import 'scss/variables';
+@import 'scss/mixins';
 
 .container {
   @include flex(space-between, center, row);

@@ -25,7 +25,7 @@ function CommentBox({ id }: Props) {
     register,
     handleSubmit,
     formState: { errors },
-    setValue
+    setValue,
   } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = ({ comment }) => {
@@ -68,7 +68,7 @@ function CommentBox({ id }: Props) {
         {...register('comment', {
           required: { value: true, message: '' },
           minLength: { value: 29, message: '' },
-          maxLength: { value: 250, message: '' }
+          maxLength: { value: 250, message: '' },
         })}
         className={`${styles.textArea} ${errors.comment ? styles.errorTextArea : ''}`}
       />

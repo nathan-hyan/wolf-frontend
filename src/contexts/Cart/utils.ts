@@ -31,7 +31,13 @@ export const buildProductOutput = (currentCart: CartItem[], product: Product, qu
   if (index === -1) {
     return [
       ...currentCart,
-      { id: product._id!, name: product.name!, price: product.price!, stock: product.stock!, quantity }
+      {
+        id: product._id!,
+        name: product.name!,
+        price: product.price!,
+        stock: product.stock!,
+        quantity,
+      },
     ];
   }
 
@@ -39,6 +45,7 @@ export const buildProductOutput = (currentCart: CartItem[], product: Product, qu
     throw new Error('No hay mas stock del producto');
   } else {
     const newQuantity = alreadyExist.quantity + quantity;
+    // eslint-disable-next-line no-param-reassign
     currentCart[index] = { ...alreadyExist, quantity: newQuantity };
   }
   return currentCart;
@@ -47,11 +54,11 @@ export const buildProductOutput = (currentCart: CartItem[], product: Product, qu
 export const buildPurchaseOutput = (userInfo: Info, products: CartItem[]) => {
   const amount = products.reduce(
     (prevValue, currentItem) => prevValue + currentItem.price * currentItem.quantity,
-    0
+    0,
   );
   return {
     products,
     userInfo,
-    amount
+    amount,
   };
 };

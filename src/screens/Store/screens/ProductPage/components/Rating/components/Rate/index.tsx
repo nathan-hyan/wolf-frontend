@@ -40,7 +40,8 @@ function Rate({ id }: Props) {
         emptySymbol={<FontAwesomeIcon icon={faStar} size="2x" />}
         fullSymbol={<FontAwesomeIcon icon={faStar} className={styles.fullStar} size="2x" />}
         onClick={handleRate}
-      />{' '}
+      />
+      {' '}
       {isLoading && <FontAwesomeIcon icon={faSpinner} className={styles.loading} spin size="1x" />}
     </div>
   );

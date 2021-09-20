@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# Wolf - Arte en cuero v1.1.0
+Front-end App made with 💖 by [Hy-An](https://github.com/nathan-hyan) & [JaqKent](https://github.com/JaqKent)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**[This project uses Wolox Bootstrap](https://github.com/Wolox/react-bootstrap)**
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+This is a marketplace app for a small leather company based in Tucumán, Argentina.
 
-### `yarn start`
+Made with React + Typescript and SCSS. Localized with i18next.
+Icons by [FontAwesome](https://fontawesome.com/)
+This Readme is courtesy of [StackEdit](https://stackedit.io/).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+*First commit: june 13, 2021*
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Libraries used:
 
-### `yarn test`
+|Library|Link|
+|--|--|
+|FontAwesome|https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react| 
+|ApiSauce|https://github.com/infinitered/apisauce|
+|i18next|https://www.i18next.com/|
+|react-hook-form|https://react-hook-form.com/|
+|react-i18next|https://www.i18next.com/|
+|react-notify-toast|https://github.com/jesusoterogomez/react-notify-toast|
+|react-rating|https://github.com/dreyescat/react-rating|
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Sections
 
-### `yarn build`
+**Main page**: This is the landing page wich will have a small "About us" section, a bit of history and photos from the workshop itself.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Store**: Here you will encounter every product in the store. The items are paginated to avoid infinite scrolling. The item card can have two states: Solid and transparent. When they're transparent, it means that theres no stock left for that product and cannot be purchased at the moment.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Product page**: Every item will have it's own product page, with a comment section, rating and description. Also you can choose how much of an item you want to buy (always depending of how much stock is left). 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Cart**: Every item purchased will go here, it stores the cart of the current session and will be deleted if the user refreshes or closes the page entirely.
 
-### `yarn eject`
+The goal of the page when a purchase is made is for the owner to contact you to finish the purchase. So no leaving any information aside your name and contact WhatsApp number.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Requirements
+This project uses enviroment variables in order to connect to the database. You can add the following line to an .env file in order to make this connection
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+    REACT_APP_ENDPOINT=http://localhost:2048/api/v1/

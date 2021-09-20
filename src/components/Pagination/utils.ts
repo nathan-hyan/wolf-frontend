@@ -26,7 +26,9 @@ export const getPager = (totalItems: number, currentPage = 1) => {
   const START_INDEX = (currentPage - 1) * PAGE_SIZE;
   const END_INDEX = Math.min(START_INDEX + PAGE_SIZE - 1, totalItems - 1);
 
-  const PAGES = [...Array(endPage + 1 - startPage).keys()].map((pageNumber) => startPage + pageNumber);
+  const ARRAY_PAGES = endPage + 1 - startPage;
+
+  const PAGES = [...Array(ARRAY_PAGES).keys()].map((pageNumber) => startPage + pageNumber);
 
   return {
     totalItems,
@@ -37,7 +39,7 @@ export const getPager = (totalItems: number, currentPage = 1) => {
     endPage,
     startIndex: START_INDEX,
     endIndex: END_INDEX,
-    pages: PAGES
+    pages: PAGES,
   };
 };
 
@@ -47,6 +49,6 @@ export const setPage = (items: Product[], currentPage = 1) => {
 
   return {
     newState,
-    items: pageOfItems
+    items: pageOfItems,
   };
 };

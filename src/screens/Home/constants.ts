@@ -7,16 +7,16 @@ export const IMAGE_GALLERY = [
   {
     id: 0,
     alt: i18next.t('Home:imageA'),
-    image: cuero1
+    image: cuero1,
   },
   {
     id: 1,
     alt: i18next.t('Home:imageB'),
-    image: cuero2
+    image: cuero2,
   },
   {
     id: 2,
     alt: i18next.t('Home:imageC'),
-    image: cuero3
-  }
+    image: cuero3,
+  },
 ];

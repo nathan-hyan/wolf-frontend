@@ -10,14 +10,17 @@ interface Props {
   onClick?: () => void;
 }
 
-function Image({ src, width, height, rounded, className, onClick }: Props) {
+function Image({
+  src, width, height, rounded, className, onClick,
+}: Props) {
   const customStyles = { backgroundImage: `url(${src})`, width: width ?? '', height: height ?? '' };
 
   return (
     <div
       onClick={onClick}
       style={customStyles}
-      className={`${styles.image} ${rounded ? styles.rounded : ''} ${className ? className : ''}`}
+      className={`${styles.image} ${rounded ? styles.rounded : ''} ${className || ''}`}
+      role="img"
     />
   );
 }

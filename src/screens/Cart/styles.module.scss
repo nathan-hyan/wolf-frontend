@@ -1,16 +1,18 @@
-@import 'scss/variables/colors';
-@import 'scss/variables/variables';
-@import 'scss/variables/mixins';
+@import 'scss/colors';
+@import 'scss/variables';
+@import 'scss/mixins';
 @import 'include-media';
 
 .container {
   @include flex(space-between, space-between, row);
   @include backgroundImage('~assets/cuero5.webp');
+
   min-height: calc(100vh - 60px);
   padding: 0 0 0 76px;
 
   @include media('<=tablet') {
     @include flex(space-between, space-between, column);
+
     padding: $phone-padding;
   }
 }
@@ -20,6 +22,7 @@
   width: 30%;
   background-color: rgba($black, 0.8);
   text-align: center;
+
   @include flex(space-between, space-between, column);
 
   .totalTitle {
@@ -43,6 +46,7 @@
 
 .mainContainer {
   padding: 60px 0;
+
   @include flex(flex-start, space-around, column);
 
   .title {
@@ -50,6 +54,7 @@
     font-weight: $bold;
     color: $white;
     margin-bottom: 30px;
+
     @include media('<=tablet') {
       line-height: normal;
     }
@@ -59,6 +64,7 @@
     font-size: 18px;
     font-weight: $bold;
     color: $white;
+
     @include media('<=tablet') {
       line-height: normal;
     }
@@ -73,6 +79,7 @@
 
 .form {
   @include flex(space-between, space-between, column);
+
   margin: 50px 0;
   gap: 30px;
   width: 50%;

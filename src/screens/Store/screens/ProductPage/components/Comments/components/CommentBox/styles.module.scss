@@ -1,11 +1,13 @@
-@import 'scss/variables/colors';
-@import 'scss/variables/variables';
-@import 'scss/variables/mixins';
+@import 'scss/colors';
+@import 'scss/variables';
+@import 'scss/mixins';
 @import 'include-media';
 
 .container {
   width: 80%;
+
   @include flex(flex-start, flex-start, column);
+
   margin-bottom: 40px;
 
   @include media('<=425px') {
@@ -36,5 +38,6 @@
 .lowerItems {
   margin-top: 10px;
   width: 100%;
+
   @include flex(space-between, space-between, row);
 }

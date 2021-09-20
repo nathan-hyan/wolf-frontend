@@ -9,7 +9,7 @@ i18next.addResources('es', 'Cart', {
   name: 'Nombre',
   whatsApp: 'Número de WhatsApp',
   wontShare: 'No compartiremos tus datos con absolutamente nadie',
-  wePromise: 'Lo prometemos'
+  wePromise: 'Lo prometemos',
 });
 
 i18next.addResources('en', 'Cart', {
@@ -21,5 +21,5 @@ i18next.addResources('en', 'Cart', {
   name: 'Name',
   whatsApp: 'WhatsApp number',
   wontShare: "We won't share this data with anyone",
-  wePromise: 'We promise'
+  wePromise: 'We promise',
 });

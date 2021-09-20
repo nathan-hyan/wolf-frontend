@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { ReactNode, FormEvent } from 'react';
 
 import styles from './styles.module.scss';
@@ -51,11 +52,12 @@ function FormInput({
   max,
   minLength,
   maxLength,
-  value
+  value,
 }: Props) {
   const InputComponent = isTextarea ? 'textarea' : 'input';
-  const showError =
-    (touched === undefined || touched) && error && (submitCount === undefined || submitCount > 0);
+  const touchedIsUndefined = (touched === undefined || touched);
+  const submitCountIsUndefined = (submitCount === undefined || submitCount > 0);
+  const showError = touchedIsUndefined && error && submitCountIsUndefined;
 
   return (
     <div className={`column start ${className}`}>

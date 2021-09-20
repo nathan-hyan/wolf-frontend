@@ -5,5 +5,5 @@ export const TIME_OPTIONS: Intl.DateTimeFormatOptions = {
   hour: 'numeric',
   minute: 'numeric',
   second: 'numeric',
-  hour12: true
+  hour12: true,
 };

@@ -11,12 +11,12 @@ export const INPUTS = [
     id: 0,
     type: 'text',
     name: 'name',
-    placeholder: 'John Doe'
+    placeholder: 'John Doe',
   },
   {
     id: 1,
     type: 'tel',
     name: 'whatsApp',
-    placeholder: '54116241579'
-  }
+    placeholder: '54116241579',
+  },
 ];

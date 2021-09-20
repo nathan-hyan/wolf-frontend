@@ -6,7 +6,7 @@ i18next.addResources('es', 'Card', {
   noReview: 'No hay reseñas',
   comment: '{{count}} Comentario',
   comment_plural: '{{count}} Comentarios',
-  noStock: 'Sin stock disponible'
+  noStock: 'Sin stock disponible',
 });
 
 i18next.addResources('en', 'Card', {
@@ -15,5 +15,5 @@ i18next.addResources('en', 'Card', {
   noReview: 'No Reviews',
   comment: '{{count}} Comment',
   comment_plural: '{{count}} Comments',
-  noStock: 'No stock available'
+  noStock: 'No stock available',
 });

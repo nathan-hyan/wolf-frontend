@@ -1,10 +1,11 @@
-@import 'scss/variables/colors';
-@import 'scss/variables/variables';
-@import 'scss/variables/mixins';
+@import 'scss/colors';
+@import 'scss/variables';
+@import 'scss/mixins';
 @import 'include-media';
 
 .slider {
   @include flex(center, center, row);
+
   margin-top: 60px;
 
   .arrow {
@@ -33,6 +34,7 @@
     height: 300px;
     border-radius: 10px;
   }
+
   @include media('<=425px') {
     margin: 0;
 
@@ -60,6 +62,7 @@
 
 .miniatures {
   @include flex(center, center, row);
+
   gap: 10px;
   margin: 10px;
 

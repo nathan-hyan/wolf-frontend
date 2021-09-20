@@ -1,5 +1,5 @@
 import { useContext, useEffect } from 'react';
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
 
 import { ProductsContext } from 'contexts/Product';
 import LoadingSpinner from 'components/LoadingSpinner';

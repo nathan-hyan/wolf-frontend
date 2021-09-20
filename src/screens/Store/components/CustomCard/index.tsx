@@ -2,7 +2,7 @@
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 import { notify } from 'react-notify-toast';
 
 import { Product } from 'interface/Products';
@@ -20,7 +20,7 @@ function CustomCard({
   _id,
   comments,
   stock,
-  rating: { total }
+  rating: { total },
 }: Product) {
   const { t } = useTranslation('Card');
   const history = useHistory();
@@ -36,16 +36,25 @@ function CustomCard({
     <div
       className={`${styles.stock} ${styles.glow} ${stock <= 0 ? styles.noStock : ''}`}
       onClick={stock <= 0 ? handleNoStock : handleViewProduct}
+      role="contentinfo"
     >
       <div className={styles.container}>
         <StaticImage src={image[0]} className={styles.image} />
         <div className={styles.textSection}>
           <div className={styles.lowerSection}>
             <h3 className={styles.title}>{name}</h3>
-            {discount && <p className={styles.discount}>${price}</p>}
-            <h4 className={styles.price}>${handleDiscountPercentage(discount, price)}</h4>
+            {discount && (
+            <p className={styles.discount}>
+              $
+              {price}
+            </p>
+            )}
+            <h4 className={styles.price}>
+              $
+              {handleDiscountPercentage(discount, price)}
+            </h4>
           </div>
-          <p className={styles.text}>{description ? description : t('noDescriptionAvailable')}</p>
+          <p className={styles.text}>{description || t('noDescriptionAvailable')}</p>
           <div className={styles.lowerSection}>
             <span className={styles.review}>
               {quantity <= 0 ? t('noReview') : t('comment', { count: quantity })}

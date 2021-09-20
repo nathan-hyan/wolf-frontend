@@ -1,7 +1,7 @@
 /* eslint-disable react/forbid-dom-props */
 import { useContext, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 
 import CustomButton from 'components/CustomButton';
 import { CartContext } from 'contexts/Cart';
@@ -67,14 +67,22 @@ function Description({ product }: Props) {
         <div className={styles.textSection}>
           <div>
             <h3 className={styles.title}>
-              {product.name} -{' '}
+              {product.name}
+              {' '}
+              -
+              {' '}
               <span className={styles.price}>
-                ${handleDiscountPercentage(product.discount, product.price)}
+                $
+                {handleDiscountPercentage(product.discount, product.price)}
               </span>
               {product.discount && (
                 <>
                   {' '}
-                  <span className={styles.discount}>(${product.price})</span>
+                  <span className={styles.discount}>
+                    ($
+                    {product.price}
+                    )
+                  </span>
                 </>
               )}
             </h3>

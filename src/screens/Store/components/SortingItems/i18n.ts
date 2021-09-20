@@ -6,7 +6,7 @@ i18next.addResources('es', 'Sort', {
   Purses: 'Carteras',
   Backpacks: 'Mochilas',
   Bags: 'Bolsos',
-  Accesories: 'Accesorios'
+  Accesories: 'Accesorios',
 });
 
 i18next.addResources('en', 'Sort', {
@@ -15,5 +15,5 @@ i18next.addResources('en', 'Sort', {
   Purses: 'Purses',
   Backpacks: 'Backpacks',
   Bags: 'Bags',
-  Accesories: 'Accesories'
+  Accesories: 'Accesories',
 });

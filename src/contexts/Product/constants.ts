@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-shadow */
 import { Product } from 'interface/Products';
 
 export const DEFAULT_PRODUCT: Product = {
@@ -17,10 +19,10 @@ export const DEFAULT_PRODUCT: Product = {
     fourStar: 0,
     fiveStar: 0,
     usersRating: 0,
-    total: 0
+    total: 0,
   },
   createdAt: '',
-  updatedAt: ''
+  updatedAt: '',
 };
 
 export enum SortingType {

@@ -4,12 +4,12 @@ i18next.addResources('es', 'NavBar', {
   home: 'Inicio',
   aboutUs: 'Sobre Nosotros',
   store: 'Tienda',
-  cart: 'Carrito'
+  cart: 'Carrito',
 });
 
 i18next.addResources('en', 'NavBar', {
   home: 'Home',
   aboutUs: 'About Us',
   store: 'Store',
-  cart: 'Cart'
+  cart: 'Cart',
 });

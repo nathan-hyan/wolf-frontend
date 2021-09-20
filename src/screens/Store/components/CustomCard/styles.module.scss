@@ -1,6 +1,6 @@
-@import 'scss/variables/colors';
-@import 'scss/variables/variables';
-@import 'scss/variables/mixins';
+@import 'scss/colors';
+@import 'scss/variables';
+@import 'scss/mixins';
 
 %container {
   width: 300px;
@@ -22,6 +22,7 @@
 
   .lowerSection {
     @include flex(space-between, center, row);
+
     margin-bottom: 10px;
 
     .title {
@@ -77,6 +78,7 @@
 
   .star {
     @include flex(flex-end, center, row);
+
     color: $warning;
 
     p {
@@ -101,13 +103,12 @@
 }
 
 .stock {
-
   @extend %container;
 }
 
 .noStock {
-
   @extend %container;
+
   filter: grayscale(100%);
   opacity: 0.5;
 }

@@ -1,5 +1,8 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { createContext, useState, useEffect, useCallback, ReactNode } from 'react';
+import {
+  createContext, useState, useEffect, useCallback, ReactNode,
+} from 'react';
 import { notify } from 'react-notify-toast';
 
 import { Product } from 'interface/Products';
@@ -25,7 +28,7 @@ export const ProductsContext = createContext<ContextProps>({
   gatherProducts: () => {},
   gatherSingleProduct: () => {},
   refreshItem: () => {},
-  handleSortProducts: () => {}
+  handleSortProducts: () => {},
 });
 
 export default function ProductsProvider({ children }: { children: ReactNode }) {
@@ -88,7 +91,7 @@ export default function ProductsProvider({ children }: { children: ReactNode }) 
       setLoadingText('');
       return fetchSingleProduct(id);
     },
-    [fetchSingleProduct, products]
+    [fetchSingleProduct, products],
   );
 
   useEffect(() => {
@@ -102,7 +105,7 @@ export default function ProductsProvider({ children }: { children: ReactNode }) 
     gatherProducts,
     gatherSingleProduct,
     refreshItem: fetchSingleProduct,
-    handleSortProducts
+    handleSortProducts,
   };
 
   return <ProductsContext.Provider value={value}>{children}</ProductsContext.Provider>;

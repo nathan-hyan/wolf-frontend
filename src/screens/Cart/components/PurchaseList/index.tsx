@@ -20,7 +20,9 @@ function PurchaseList({ items, className }: Props) {
     removeProductFromCart(id);
   };
 
-  const calculateTotal = () => items.reduce((current, total) => total.price * total.quantity + current, 0);
+  const calculateTotal = () => items.reduce((current, total) => (
+    total.price * total.quantity + current
+  ), 0);
 
   return (
     <div className={`${className}`}>
@@ -30,7 +32,10 @@ function PurchaseList({ items, className }: Props) {
       <hr className={styles.separator} />
       <div className={styles.totalContainer}>
         <p className={styles.totalText}>{t('total')}</p>
-        <p className={styles.price}>${calculateTotal()}</p>
+        <p className={styles.price}>
+          $
+          {calculateTotal()}
+        </p>
       </div>
     </div>
   );

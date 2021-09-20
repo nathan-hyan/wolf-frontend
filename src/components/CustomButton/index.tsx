@@ -10,7 +10,9 @@ interface Props {
   secondary?: boolean;
 }
 
-function CustomButton({ label, onClick, className, small, isSubmit, disabled, secondary }: Props) {
+function CustomButton({
+  label, onClick, className, small, isSubmit, disabled, secondary,
+}: Props) {
   return (
     <div className={className} title="outer-div">
       <button

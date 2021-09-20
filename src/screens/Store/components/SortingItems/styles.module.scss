@@ -1,9 +1,10 @@
-@import 'scss/variables/colors';
-@import 'scss/variables/mixins';
+@import 'scss/colors';
+@import 'scss/mixins';
 @import 'include-media';
 
 .container {
   @include flex(center, center, row);
+
   flex-wrap: wrap;
   width: 100vw;
   padding: 20px;
@@ -11,7 +12,7 @@
   gap: 5px;
 
   @include media('<tablet') {
-    .separator  {
+    .separator {
       display: none;
     }
   }

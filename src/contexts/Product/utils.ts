@@ -1,6 +1,8 @@
 import { Product } from 'interface/Products';
 
-import { SortingType, backpacks, wallets, purses, bags, accesories } from './constants';
+import {
+  SortingType, backpacks, wallets, purses, bags, accesories,
+} from './constants';
 
 export const sortProducts = (products: Product[], sortType: number) => {
   switch (sortType) {

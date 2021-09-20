@@ -15,11 +15,17 @@ function Comments({ product: { comments, _id } }: Props) {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>{t('leaveYourComment')}:</h1>
+      <h1 className={styles.title}>
+        {t('leaveYourComment')}
+        :
+      </h1>
       <CommentBox id={_id!} />
       {comments.length && (
         <>
-          <h1 className={styles.title}>{t('comments')}:</h1>
+          <h1 className={styles.title}>
+            {t('comments')}
+            :
+          </h1>
           {comments.map((comment) => (
             <CommentItem timestamp={comment.timestamp} body={comment.body} key={comment._id} />
           ))}

@@ -29,7 +29,7 @@ function Store() {
           <Banner />
           <div className={styles.mainContent}>
             <SortingItems />
-            {products.length ? (
+            {products?.length ? (
               <>
                 <div className={styles.productContainer}>
                   {productList.map((product) => (

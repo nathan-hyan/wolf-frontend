@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 
-import User from 'contexts/User';
 import NavigationBar from 'components/NavigationBar';
 import ProductsProvider from 'contexts/Product';
 import CartProvider from 'contexts/Cart';
@@ -16,18 +15,16 @@ function Routes() {
     <Router>
       <ProductsProvider>
         <CartProvider>
-          <User>
-            <NavigationBar />
-            <div className={styles.container}>
-              <Suspense>
-                <Switch>
-                  {ROUTES.map(({ path, ...config }) => (
-                    <RouteItem key={path} path={path} {...config} />
-                  ))}
-                </Switch>
-              </Suspense>
-            </div>
-          </User>
+          <NavigationBar />
+          <div className={styles.container}>
+            <Suspense>
+              <Switch>
+                {ROUTES.map(({ path, ...config }) => (
+                  <RouteItem key={path} path={path} {...config} />
+                ))}
+              </Switch>
+            </Suspense>
+          </div>
         </CartProvider>
       </ProductsProvider>
     </Router>

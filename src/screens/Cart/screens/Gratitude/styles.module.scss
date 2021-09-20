@@ -1,11 +1,12 @@
-@import 'scss/variables/colors';
-@import 'scss/variables/variables';
-@import 'scss/variables/mixins';
+@import 'scss/colors';
+@import 'scss/variables';
+@import 'scss/mixins';
 @import 'include-media';
 
 .container {
   @include flex(space-between, space-between, column);
   @include backgroundImage('~assets/cuero5.webp');
+
   min-height: calc(100vh - 60px);
   padding: 60px 100px 80px;
   gap: 50px;
@@ -17,6 +18,7 @@
 
   .text {
     padding-top: 120px;
+
     @include flex(center, center, column);
 
     h1 {
@@ -37,6 +39,7 @@
       padding-top: 20px;
       white-space: pre-wrap;
       line-height: 45px;
+
       @include media('<=425px') {
         line-height: normal;
         margin: 40px 0;

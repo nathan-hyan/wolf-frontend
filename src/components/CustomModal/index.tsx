@@ -20,10 +20,10 @@ function CustomModal({
   cancelButtonText,
   acceptButtonOnClick,
   cancelButtonOnClick,
-  close
+  close,
 }: Props) {
   return show ? (
-    <div className={styles.container} onClick={close}>
+    <div className={styles.container} onClick={close} role="alert">
       <div className={styles.innerContainer}>
         <div className={styles.title}>
           <h1>{title}</h1>

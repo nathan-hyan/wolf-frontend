@@ -1,11 +1,12 @@
-@import 'scss/variables/colors';
-@import 'scss/variables/variables';
-@import 'scss/variables/mixins';
+@import 'scss/colors';
+@import 'scss/variables';
+@import 'scss/mixins';
 @import 'include-media';
 
 .container {
   @include flex(space-between, space-between, column);
   @include backgroundImage('~assets/cuero5.webp');
+
   min-height: calc(100vh - 60px);
   padding: 200px 60px;
   gap: 50px;
@@ -35,6 +36,7 @@
   @include media('<=425px') {
     padding: $phone-padding;
     margin: 0;
+
     @include flex(center, center, column);
 
     .text {
@@ -54,6 +56,7 @@
 
 .image {
   @include flex(flex-end, center, row);
+
   gap: 50px;
 
   .singleImage {
@@ -70,6 +73,7 @@
       height: 100px;
       width: 150px;
     }
+
     overflow: scroll;
     width: 100vw;
     padding: $phone-padding;

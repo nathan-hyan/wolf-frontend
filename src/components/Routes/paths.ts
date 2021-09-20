@@ -7,7 +7,7 @@ const paths = {
   aboutUs: '/about-us',
   cart: '/cart',
   thankYou: '/thank-you',
-  product: '/product/:id'
+  product: '/product/:id',
 };
 
 export default paths;

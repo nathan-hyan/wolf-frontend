@@ -24,7 +24,8 @@ function SortingItems() {
             onClick={() => handleSelect(sort.id)}
             name={sort.name}
             isSelected={currentSelected === sort.id}
-          />{' '}
+          />
+          {' '}
           {index !== SORT_TYPE.length - 1 && <span className={styles.separator}>|</span>}
         </div>
       ))}

@@ -1,10 +1,11 @@
-@import 'scss/variables/colors';
-@import 'scss/variables/mixins';
-@import 'scss/variables/variables';
+@import 'scss/colors';
+@import 'scss/mixins';
+@import 'scss/variables';
 @import 'include-media';
 
 .container {
   @include flex(space-between, center, row);
+
   position: fixed;
   width: 100%;
   padding: 15px 76px;
@@ -20,6 +21,7 @@
 
 .links {
   @include flex(flex-start, center, row);
+
   gap: 15px;
 }
 

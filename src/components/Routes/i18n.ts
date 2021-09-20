@@ -1,6 +1,5 @@
 import i18next from 'i18next';
 
-// TODO: change to improve SEO
 i18next.addResources('es', 'Routes', {
   loginTitle: 'Iniciar sesión',
   loginDescription: '',
@@ -11,7 +10,7 @@ i18next.addResources('es', 'Routes', {
   aboutUsTitle: 'Acerca de nosotros',
   aboutUsDescription: 'About us',
   cartTitle: 'Carrito',
-  cartDescription: 'Cart'
+  cartDescription: 'Cart',
 });
 
 i18next.addResources('en', 'Routes', {
@@ -24,5 +23,5 @@ i18next.addResources('en', 'Routes', {
   aboutUsTitle: 'About us',
   aboutUsDescription: 'About us',
   cartTitle: 'Cart',
-  cartDescription: 'Cart'
+  cartDescription: 'Cart',
 });

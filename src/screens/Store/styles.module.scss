@@ -1,11 +1,12 @@
-@import 'scss/variables/colors';
-@import 'scss/variables/variables';
-@import 'scss/variables/mixins';
+@import 'scss/colors';
+@import 'scss/variables';
+@import 'scss/mixins';
 @import 'include-media';
 
 .container {
   @include backgroundImage('~assets/cuero5.webp');
   @include flex(flex-start, center, column);
+
   min-height: calc(100vh - 60px);
   padding: 20px;
 
@@ -15,6 +16,7 @@
 
   @include media('<=425px') {
     @include flex(flex-start, center, column);
+
     text-align: center;
 
     .noItemsTitle {
@@ -27,6 +29,7 @@
 
     .mainContent {
       @include flex(flex-start, center, column);
+
       margin-top: 30px;
       gap: 30px;
     }
@@ -35,6 +38,7 @@
 
 .productContainer {
   @include flex();
+
   padding: 0 13vw;
   flex-wrap: wrap;
   gap: 30px;
@@ -46,6 +50,7 @@
 
 .noItems {
   @include flex(center, center, column);
+
   margin-top: 100px;
   gap: 50px;
 }

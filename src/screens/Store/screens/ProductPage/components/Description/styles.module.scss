@@ -1,10 +1,11 @@
-@import 'scss/variables/colors';
-@import 'scss/variables/variables';
-@import 'scss/variables/mixins';
+@import 'scss/colors';
+@import 'scss/variables';
+@import 'scss/mixins';
 @import 'include-media';
 
 .container {
   @include flex(space-between, center, row);
+
   padding: 50px 0;
   gap: 50px;
   min-height: 400px;
@@ -13,6 +14,7 @@
 
   @include media('<=tablet') {
     @include flex(center, center, column);
+
     text-align: center;
   }
 
@@ -31,6 +33,7 @@
   .separador {
     border-left: 1px solid $black;
     height: 250px;
+
     @include media('<=tablet') {
       display: none;
     }
@@ -88,9 +91,11 @@
 
 .quantity {
   @include flex(flex-start);
+
   @include media('<=tablet') {
     @include flex(center);
   }
+
   gap: 5px;
   margin-bottom: 10px;
 }

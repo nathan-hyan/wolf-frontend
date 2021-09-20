@@ -1,7 +1,6 @@
-import { useHistory, useLocation } from 'react-router';
+import { useHistory, useLocation, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
 
 import logo from 'assets/logo.webp';
 import paths from 'components/Routes/paths';

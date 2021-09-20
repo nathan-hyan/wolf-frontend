@@ -1,11 +1,12 @@
-@import 'scss/variables/colors';
-@import 'scss/variables/variables';
-@import 'scss/variables/mixins';
+@import 'scss/colors';
+@import 'scss/variables';
+@import 'scss/mixins';
 @import 'include-media';
 
 .container {
   @include flex(flex-start, center, column);
   @include backgroundImage('~assets/cuero5.webp');
+
   min-height: calc(100vh - 60px);
   padding: 0 13%;
 
@@ -24,5 +25,6 @@
   }
 
   @include flex(center, flex-start, row);
+
   width: 100%;
 }

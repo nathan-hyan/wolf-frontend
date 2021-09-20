@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 
 import CustomButton from 'components/CustomButton';
 import paths from 'components/Routes/paths';

@@ -15,9 +15,15 @@ function Rating({ product: { rating, _id } }: Props) {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>{t('yourRating')}:</h1>
+      <h1 className={styles.title}>
+        {t('yourRating')}
+        :
+      </h1>
       <Rate id={_id!} />
-      <h1 className={`${styles.title} ${styles.spacing}`}>{t('overAllRating')}:</h1>
+      <h1 className={`${styles.title} ${styles.spacing}`}>
+        {t('overAllRating')}
+        :
+      </h1>
       <Breakdown rating={rating} />
     </div>
   );

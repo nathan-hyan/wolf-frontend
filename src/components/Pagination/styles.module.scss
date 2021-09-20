@@ -1,6 +1,6 @@
-@import 'scss/variables/colors';
-@import 'scss/variables/variables';
-@import 'scss/variables/mixins';
+@import 'scss/colors';
+@import 'scss/variables';
+@import 'scss/mixins';
 
 .container {
   .pagination {
@@ -9,6 +9,7 @@
     background-color: $background;
     border-radius: 5px;
   }
+
   padding-top: 15px;
   margin-top: 15px;
   width: 100%;
