@@ -1,0 +1,19 @@
+@import 'scss/variables/colors';
+@import 'scss/variables/variables';
+@import 'scss/variables/mixins';
+
+.container {
+  @include flex(flex-start, flex-start, column);
+  gap: 20px;
+  width: 100%;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: $bold;
+  color: $white;
+}
+
+.spacing {
+  margin-top: 40px;
+}

@@ -1,0 +1,12 @@
+@import 'scss/variables/colors';
+@import 'scss/variables/variables';
+@import 'scss/variables/mixins';
+
+.fullStar {
+  color: $warning;
+}
+
+.loading {
+  color: $white;
+  margin-left: 10px;
+}

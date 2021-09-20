@@ -1,0 +1,113 @@
+@import 'scss/variables/colors';
+@import 'scss/variables/variables';
+@import 'scss/variables/mixins';
+
+%container {
+  width: 300px;
+  height: 400px;
+  background-color: $black;
+  border-radius: 5px;
+
+  .image {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .textSection {
+    padding: 10px 25px;
+  }
+
+  .lowerSection {
+    @include flex(space-between, center, row);
+    margin-bottom: 10px;
+
+    .title {
+      font-weight: $bold;
+      color: $white;
+      width: 180px;
+      max-width: 300px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .price {
+      margin-left: 10px;
+      font-weight: $bold;
+      color: $success;
+      font-size: 18px;
+    }
+  }
+
+  .text {
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    line-height: 18px;
+    height: 145px;
+    text-align: justify;
+    margin-right: -1em;
+    padding-right: 1em;
+
+    &::before {
+      content: '...';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      width: 1em;
+      height: 1em;
+      margin-top: 0.2em;
+      background: transparent;
+    }
+  }
+
+  .review {
+    width: 50%;
+    padding: 5px;
+  }
+
+  .star {
+    @include flex(flex-end, center, row);
+    color: $warning;
+
+    p {
+      color: $white;
+      font-weight: $bold;
+      margin-right: 5px;
+    }
+  }
+
+  .discount {
+    font-weight: $bold;
+    text-decoration: line-through;
+  }
+}
+
+.glow {
+  &:hover {
+    box-shadow: 0 0 2px 2px lighten($primary, 3);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+.stock {
+
+  @extend %container;
+}
+
+.noStock {
+
+  @extend %container;
+  filter: grayscale(100%);
+  opacity: 0.5;
+}

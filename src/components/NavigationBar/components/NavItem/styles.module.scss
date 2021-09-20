@@ -1,0 +1,54 @@
+@import 'scss/variables/colors';
+@import 'scss/variables/variables';
+@import 'scss/variables/mixins';
+
+%icon {
+  color: $white;
+
+  &:hover {
+    color: $primary;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: darken($primary, 5);
+  }
+}
+
+.text {
+  p {
+    font-size: 15px;
+    font-weight: $bold;
+    padding: 0 25px;
+    color: $white;
+  }
+}
+
+.label {
+  font-size: 15px;
+  font-weight: $bold;
+
+  @extend %icon;
+}
+
+.icon {
+
+  @extend %icon;
+}
+
+.active {
+  color: darken($primary, 5);
+}
+
+.cartNumber {
+  position: absolute;
+  text-align: center;
+  width: 15px;
+  height: 15px;
+  color: $white;
+  font-size: 10px;
+  font-weight: $bold;
+  border-radius: 15px;
+  background-color: $primary;
+  margin-left: 5px;
+}

@@ -1,0 +1,87 @@
+@import 'scss/variables/colors';
+@import 'scss/variables/variables';
+@import 'scss/variables/mixins';
+@import 'include-media';
+
+.container {
+  @include flex(space-between, space-between, column);
+  @include backgroundImage('~assets/cuero5.webp');
+  min-height: calc(100vh - 60px);
+  padding: 200px 60px;
+  gap: 50px;
+
+  .text {
+    @include flex(center, flex-start, column);
+
+    h1 {
+      font-size: 40px;
+      font-weight: $bold;
+      color: $white;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: $white;
+      padding-top: 20px;
+      white-space: pre-wrap;
+      line-height: 20px;
+    }
+  }
+
+  .button {
+    margin-top: 40px;
+  }
+
+  @include media('<=425px') {
+    padding: $phone-padding;
+    margin: 0;
+    @include flex(center, center, column);
+
+    .text {
+      text-align: center;
+
+      h1 {
+        line-height: normal;
+        font-size: 28px;
+      }
+    }
+
+    .button {
+      text-align: center;
+    }
+  }
+}
+
+.image {
+  @include flex(flex-end, center, row);
+  gap: 50px;
+
+  .singleImage {
+    height: 200px;
+    width: 300px;
+  }
+
+  @include media('<=375px') {
+    display: none;
+  }
+
+  @include media('<=425px') {
+    .singleImage {
+      height: 100px;
+      width: 150px;
+    }
+    overflow: scroll;
+    width: 100vw;
+    padding: $phone-padding;
+    gap: 10px;
+  }
+
+  @include media('>=425px', '<=tablet') {
+    gap: 10px;
+
+    .singleImage {
+      height: 150px;
+      width: 350px;
+    }
+  }
+}

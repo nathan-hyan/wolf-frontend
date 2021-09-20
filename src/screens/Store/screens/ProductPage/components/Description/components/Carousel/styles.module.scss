@@ -1,0 +1,83 @@
+@import 'scss/variables/colors';
+@import 'scss/variables/variables';
+@import 'scss/variables/mixins';
+@import 'include-media';
+
+.slider {
+  @include flex(center, center, row);
+  margin-top: 60px;
+
+  .arrow {
+    font-size: 50px;
+    color: $primary;
+    cursor: pointer;
+  }
+
+  .slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+    transform: scale(0.9);
+  }
+
+  .slideActive {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1);
+  }
+
+  .image {
+    margin: 0 35px 10px;
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+  }
+  @include media('<=425px') {
+    margin: 0;
+
+    .image {
+      margin: 0;
+      width: 90vw;
+      height: 200px;
+    }
+
+    .arrow {
+      display: none;
+    }
+  }
+
+  @include media('>425px', '<=tablet') {
+    margin: 0;
+
+    .image {
+      margin: 0 20px 30px;
+      width: 70vw;
+      height: 350px;
+    }
+  }
+}
+
+.miniatures {
+  @include flex(center, center, row);
+  gap: 10px;
+  margin: 10px;
+
+  .mini {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    @include media('<=425px') {
+      height: 50px;
+    }
+  }
+}

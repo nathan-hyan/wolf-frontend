@@ -1,0 +1,31 @@
+@import 'scss/variables/colors';
+@import 'scss/variables/mixins';
+@import 'include-media';
+
+.selected {
+  color: $red;
+
+  @include media('<tablet') {
+    color: $white;
+    background-color: $primary;
+    border: 1px solid $primary;
+  }
+}
+
+.notSelected {
+  color: $white;
+
+  @include media('<tablet') {
+    border: 1px solid $black;
+  }
+}
+
+.text {
+  margin: 0 10px;
+  cursor: pointer;
+
+  @include media('<tablet') {
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+}

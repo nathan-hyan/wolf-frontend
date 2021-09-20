@@ -1,0 +1,55 @@
+@import 'scss/variables/colors';
+@import 'scss/variables/variables';
+@import 'scss/variables/mixins';
+@import 'include-media';
+
+.container {
+  @include flex(space-between, space-between, column);
+  @include backgroundImage('~assets/cuero5.webp');
+  min-height: calc(100vh - 60px);
+  padding: 60px 100px 80px;
+  gap: 50px;
+
+  @include media('<=425px') {
+    text-align: center;
+    padding: $phone-padding;
+  }
+
+  .text {
+    padding-top: 120px;
+    @include flex(center, center, column);
+
+    h1 {
+      font-size: 40px;
+      font-weight: $bold;
+      color: $white;
+      margin-bottom: 20px;
+
+      @include media('<=425px') {
+        line-height: normal;
+        margin-bottom: 0;
+      }
+    }
+
+    p {
+      text-align: center;
+      color: $white;
+      padding-top: 20px;
+      white-space: pre-wrap;
+      line-height: 45px;
+      @include media('<=425px') {
+        line-height: normal;
+        margin: 40px 0;
+        padding: 0;
+      }
+    }
+  }
+
+  .button {
+    margin-top: 100px;
+
+    @include media('<=425px') {
+      margin-top: 0;
+    }
+  }
+}

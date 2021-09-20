@@ -1,0 +1,25 @@
+@import 'scss/variables/colors';
+@import 'scss/variables/variables';
+@import 'scss/variables/mixins';
+
+.container {
+  @include flex(flex-start, flex-start, column);
+}
+
+.body {
+  color: $white;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.timestamp {
+  margin: 10px 0;
+  font-weight: $bold;
+  font-size: 12px;
+}
+
+.separator {
+  border-top: 1px solid $black;
+  width: 100px;
+  margin-bottom: 20px;
+}

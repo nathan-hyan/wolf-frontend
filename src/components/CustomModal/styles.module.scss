@@ -1,0 +1,60 @@
+@import 'scss/variables/colors';
+@import 'scss/variables/variables';
+@import 'scss/variables/mixins';
+
+.container {
+  z-index: 9;
+  position: fixed;
+  min-height: calc(100vh - 60px);
+  width: 100vw;
+  background-color: rgba($black, 0.5);
+  @include flex(center, center);
+}
+
+.innerContainer {
+  min-height: 60px;
+  position: fixed;
+  background-color: $background;
+  border-color: 1px solid $black;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: $shadow;
+}
+
+.title {
+  @include flex(space-between, center);
+
+  h1 {
+    font-size: 24px;
+    font-weight: $bold;
+    color: $white;
+  }
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid $black;
+}
+
+.close {
+  color: $primary;
+  font-weight: $bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.body {
+  text-align: center;
+  white-space: pre-wrap;
+  padding: 0 25px;
+
+  p {
+    color: $white;
+  }
+}
+
+.buttons {
+  padding-top: 12px;
+  margin-top: 12px;
+  border-top: 1px solid $black;
+  @include flex();
+  gap: 15px;
+}

@@ -1,0 +1,28 @@
+@import 'scss/variables/colors';
+@import 'scss/variables/variables';
+@import 'scss/variables/mixins';
+@import 'include-media';
+
+.container {
+  @include backgroundImage('~assets/cuero3.webp', 0);
+  @include flex(flex-start, flex-start, column);
+  width: 80%;
+  border-radius: 15px;
+  padding: 100px 20px;
+
+  .title {
+    color: $white;
+    font-size: 28px;
+    font-weight: $bold;
+    text-shadow: $text-shadow;
+  }
+
+  @include media('<=425px') {
+    padding: 50px 20px;
+    width: 100%;
+
+    .title {
+      line-height: normal;
+    }
+  }
+}

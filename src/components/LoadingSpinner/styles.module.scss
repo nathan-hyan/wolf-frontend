@@ -1,0 +1,63 @@
+@import 'scss/variables/colors';
+@import 'scss/variables/variables';
+@import 'scss/variables/mixins';
+
+.spinner {
+  width: 4rem;
+  height: 4rem;
+  border: 3px solid transparent;
+  border-top-color: rgba($black, 0.5);
+  border-bottom-color: rgba($black, 0.5);
+  border-radius: 50%;
+  animation: rotation 0.8s ease infinite;
+}
+
+.rclogoCenter {
+  position: relative;
+  top: -52px;
+  left: 12px;
+  margin: 0;
+  font-size: 24px;
+  font-weight: $bold;
+  color: $gray;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  position: absolute;
+  @include flex(center, center, column);
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+}
+
+.spinnerContainer {
+  @include flex(center, center, column);
+  text-align: center;
+  position: fixed;
+  height: auto;
+  width: 150px;
+  padding: 15px;
+  border-radius: 15px;
+  z-index: 11;
+  background-color: $white;
+}
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba($black, 0.8);
+}

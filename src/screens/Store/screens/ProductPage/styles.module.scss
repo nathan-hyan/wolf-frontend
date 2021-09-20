@@ -1,0 +1,28 @@
+@import 'scss/variables/colors';
+@import 'scss/variables/variables';
+@import 'scss/variables/mixins';
+@import 'include-media';
+
+.container {
+  @include flex(flex-start, center, column);
+  @include backgroundImage('~assets/cuero5.webp');
+  min-height: calc(100vh - 60px);
+  padding: 0 13%;
+
+  @include media('<=tablet') {
+    padding: $phone-padding;
+  }
+}
+
+.interactivity {
+  @include media('<=tablet') {
+    @include flex(center, center, column-reverse);
+
+    h1 {
+      line-height: normal;
+    }
+  }
+
+  @include flex(center, flex-start, row);
+  width: 100%;
+}

@@ -1,0 +1,9 @@
+@import 'scss/variables/colors';
+@import 'scss/variables/variables';
+@import 'scss/variables/mixins';
+
+.loading {
+  padding-top: 60px;
+  height: 100%;
+  @include backgroundImage('~assets/cuero5.webp');
+}

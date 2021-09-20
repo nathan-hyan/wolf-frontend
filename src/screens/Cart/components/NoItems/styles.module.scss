@@ -1,0 +1,24 @@
+@import 'scss/variables/colors';
+@import 'scss/variables/variables';
+@import 'scss/variables/mixins';
+
+.container {
+  @include flex(center, center, column);
+  height: 100%;
+}
+
+.icon {
+  color: $primary;
+  font-size: 70px;
+}
+
+.title {
+  color: $white;
+  font-weight: $bold;
+  font-size: 20px;
+  padding: 20px 0;
+}
+
+.body {
+  color: $white;
+}

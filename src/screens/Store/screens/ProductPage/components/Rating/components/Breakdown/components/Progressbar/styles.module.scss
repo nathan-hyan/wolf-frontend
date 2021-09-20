@@ -1,0 +1,38 @@
+@import 'scss/variables/colors';
+@import 'scss/variables/variables';
+@import 'scss/variables/mixins';
+
+.container {
+  @include flex();
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.starCount {
+  font-weight: $bold;
+  color: $white;
+  @include flex();
+}
+
+.star {
+  margin-left: 5px;
+  color: $warning;
+}
+
+.barContainer {
+  height: 20px;
+  width: 100%;
+  background-color: $black;
+}
+
+.filler {
+  height: 100%;
+  background-color: $warning;
+  text-align: right;
+}
+
+.label {
+  padding: 5px;
+  color: $white;
+  font-weight: $bold;
+}

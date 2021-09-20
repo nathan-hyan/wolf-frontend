@@ -1,0 +1,19 @@
+@import 'scss/variables/colors';
+
+.input {
+  width: 100%;
+  background-color: $black;
+  border-radius: 5px;
+  border-bottom: 2px solid $gray;
+  height: 30px;
+  padding: 0 12px;
+  color: $white;
+
+  &:focus {
+    border-bottom: 2px solid $primary;
+  }
+
+  &.error {
+    border-bottom: 2px solid $red;
+  }
+}

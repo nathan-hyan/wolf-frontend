@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with the optionalProp 1`] = `
+<div
+  class="container"
+>
+  This is a CustomModal with 
+  1
+  <p>
+     and 
+    2
+  </p>
+</div>
+`;
+
+exports[`renders correctly without the optionalProp 1`] = `
+<div
+  class="container"
+>
+  This is a CustomModal with 
+  1
+</div>
+`;

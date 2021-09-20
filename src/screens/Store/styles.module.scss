@@ -1,0 +1,62 @@
+@import 'scss/variables/colors';
+@import 'scss/variables/variables';
+@import 'scss/variables/mixins';
+@import 'include-media';
+
+.container {
+  @include backgroundImage('~assets/cuero5.webp');
+  @include flex(flex-start, center, column);
+  min-height: calc(100vh - 60px);
+  padding: 20px;
+
+  .mainContent {
+    @include flex(space-around, center, column);
+  }
+
+  @include media('<=425px') {
+    @include flex(flex-start, center, column);
+    text-align: center;
+
+    .noItemsTitle {
+      line-height: normal;
+    }
+
+    .noItemsText {
+      margin-top: 20px;
+    }
+
+    .mainContent {
+      @include flex(flex-start, center, column);
+      margin-top: 30px;
+      gap: 30px;
+    }
+  }
+}
+
+.productContainer {
+  @include flex();
+  padding: 0 13vw;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @include media('<=tablet') {
+    padding: 0;
+  }
+}
+
+.noItems {
+  @include flex(center, center, column);
+  margin-top: 100px;
+  gap: 50px;
+}
+
+.noItemsTitle {
+  font-size: 2em;
+  font-weight: $bold;
+  text-align: center;
+  color: $white;
+}
+
+.noItemsText {
+  color: $white;
+}

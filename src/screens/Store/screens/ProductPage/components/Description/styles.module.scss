@@ -1,0 +1,96 @@
+@import 'scss/variables/colors';
+@import 'scss/variables/variables';
+@import 'scss/variables/mixins';
+@import 'include-media';
+
+.container {
+  @include flex(space-between, center, row);
+  padding: 50px 0;
+  gap: 50px;
+  min-height: 400px;
+  height: fit-content;
+  width: 100%;
+
+  @include media('<=tablet') {
+    @include flex(center, center, column);
+    text-align: center;
+  }
+
+  .imageContainer {
+    width: 100%;
+  }
+
+  .image {
+    width: 500px;
+    height: 330px;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+  }
+
+  .separador {
+    border-left: 1px solid $black;
+    height: 250px;
+    @include media('<=tablet') {
+      display: none;
+    }
+  }
+
+  .textSection {
+    width: 100%;
+
+    .title {
+      font-size: 1.7rem;
+      font-weight: $bold;
+      color: $white;
+      line-height: 25px;
+    }
+
+    .price {
+      font-size: 1.3rem;
+      font-weight: $bold;
+      color: $primary;
+    }
+
+    .text {
+      line-height: 18px;
+      font-size: 14px;
+      color: $white;
+      max-height: 300px;
+      max-width: 450px;
+      overflow-y: scroll;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+      margin: 30px 0;
+
+      @include media('<=tablet') {
+        overflow-y: visible;
+      }
+    }
+
+    .discount {
+      font-weight: $bold;
+      text-decoration: line-through;
+    }
+  }
+}
+
+.lowerSection {
+  span {
+    color: $white;
+    margin-bottom: 10px;
+  }
+
+  @include media('<=tablet') {
+    margin-top: 30px;
+  }
+}
+
+.quantity {
+  @include flex(flex-start);
+  @include media('<=tablet') {
+    @include flex(center);
+  }
+  gap: 5px;
+  margin-bottom: 10px;
+}
