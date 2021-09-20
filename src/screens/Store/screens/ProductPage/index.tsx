@@ -12,6 +12,7 @@ import Rating from './components/Rating';
 function ProductPage() {
   const { id } = useParams<any>();
   const { gatherSingleProduct, singleProduct, isLoading } = useContext(ProductsContext);
+
   useEffect(() => {
     window.scrollTo(0, 0);
     gatherSingleProduct(id);

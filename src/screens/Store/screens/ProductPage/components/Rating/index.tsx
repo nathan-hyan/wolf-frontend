@@ -10,7 +10,7 @@ interface Props {
   product: Product;
 }
 
-function Rating({ product: { rating, _id } }: Props) {
+function Rating({ product: { rating, _id, name } }: Props) {
   const { t } = useTranslation('Product');
 
   return (
@@ -19,7 +19,7 @@ function Rating({ product: { rating, _id } }: Props) {
         {t('yourRating')}
         :
       </h1>
-      <Rate id={_id!} />
+      <Rate id={_id!} name={name} />
       <h1 className={`${styles.title} ${styles.spacing}`}>
         {t('overAllRating')}
         :

@@ -9,6 +9,8 @@ import { Product } from 'interface/Products';
 import { handleDiscountPercentage } from 'utils/randomNumber';
 import StaticImage from 'components/StaticImage';
 
+import useGATracking from 'hooks/useGATracking';
+import { GAProductActions, GoogleAnalyticsEvents } from 'interface/GoogleAnalytics';
 import styles from './styles.module.scss';
 
 function CustomCard({
@@ -24,6 +26,7 @@ function CustomCard({
 }: Product) {
   const { t } = useTranslation('Card');
   const history = useHistory();
+  const gaTracking = useGATracking(GoogleAnalyticsEvents.Product);
 
   const quantity = comments.length;
 
@@ -31,6 +34,7 @@ function CustomCard({
 
   const handleViewProduct = () => {
     history.push(`/product/${_id}`);
+    gaTracking(GAProductActions.Entered, name);
   };
   return (
     <div

@@ -6,6 +6,8 @@ import { notify } from 'react-notify-toast';
 import CustomButton from 'components/CustomButton';
 import { commentProduct } from 'services/ProductService';
 import { ProductsContext } from 'contexts/Product';
+import useGATracking from 'hooks/useGATracking';
+import { GAGlobalActions, GAProductActions, GoogleAnalyticsEvents } from 'interface/GoogleAnalytics';
 
 import styles from './styles.module.scss';
 
@@ -15,11 +17,13 @@ type Inputs = {
 
 interface Props {
   id: string;
+  name: string;
 }
 
-function CommentBox({ id }: Props) {
+function CommentBox({ id, name }: Props) {
   const { t } = useTranslation('Product');
   const [isLoading, setIsLoading] = useState(false);
+  const gaTracking = useGATracking(GoogleAnalyticsEvents.Product);
   const { refreshItem } = useContext(ProductsContext);
   const {
     register,
@@ -36,11 +40,13 @@ function CommentBox({ id }: Props) {
         refreshItem(id);
         setValue('comment', '');
         setIsLoading(false);
+        gaTracking(GAProductActions.Commented, `En ${name} comentó "${comment}"`);
       })
       .catch(() => {
         notify.show(t('commentError'), 'error');
         refreshItem(id);
         setIsLoading(false);
+        gaTracking(GAGlobalActions.Issue);
       });
   };
 

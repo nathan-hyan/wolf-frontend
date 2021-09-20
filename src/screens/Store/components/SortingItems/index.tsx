@@ -3,6 +3,8 @@ import { useContext, useState } from 'react';
 import { ProductsContext } from 'contexts/Product';
 import { SortingType } from 'contexts/Product/constants';
 
+import useGATracking from 'hooks/useGATracking';
+import { GAStoreActions, GoogleAnalyticsEvents } from 'interface/GoogleAnalytics';
 import Item from './components/Item';
 import { SORT_TYPE } from './constants';
 import styles from './styles.module.scss';
@@ -10,8 +12,10 @@ import styles from './styles.module.scss';
 function SortingItems() {
   const [currentSelected, setCurrentSelected] = useState(SortingType.All);
   const { handleSortProducts: sortProducts } = useContext(ProductsContext);
+  const gaTracking = useGATracking(GoogleAnalyticsEvents.Store);
 
   const handleSelect = (id: number) => {
+    gaTracking(GAStoreActions.Filtered, SortingType[id]);
     setCurrentSelected(id);
     sortProducts(id);
   };

@@ -8,19 +8,24 @@ import Rating from 'react-rating';
 import { ProductsContext } from 'contexts/Product';
 import { rateProduct } from 'services/ProductService';
 
+import { GAProductActions, GoogleAnalyticsEvents } from 'interface/GoogleAnalytics';
+import useGATracking from 'hooks/useGATracking';
 import styles from './styles.module.scss';
 
 interface Props {
   id: string;
+  name: string;
 }
 
-function Rate({ id }: Props) {
+function Rate({ id, name }: Props) {
   const { t } = useTranslation('Product');
   const { refreshItem } = useContext(ProductsContext);
+  const gaTracking = useGATracking(GoogleAnalyticsEvents.Product);
 
   const [isLoading, setIsLoading] = useState(false);
 
   const handleRate = (rate: number) => {
+    gaTracking(GAProductActions.Rated, `${name} con ${rate} estrellas`);
     setIsLoading(true);
     rateProduct(id, rate)
       .then(() => {
