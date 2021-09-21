@@ -5,7 +5,7 @@ import { Product } from 'interface/Products';
 export const DEFAULT_PRODUCT: Product = {
   price: 0,
   stock: 0,
-  category: '',
+  category: 0,
   _id: '',
   name: '',
   image: [''],
@@ -33,8 +33,5 @@ export enum SortingType {
   Bags,
   Accesories
 }
-export const wallets = 'Wallets';
-export const purses = 'Purses';
-export const backpacks = 'Backpacks';
-export const bags = 'Bags';
-export const accesories = 'Accesories';
+
+export const SORTING_LABELS = ['All', 'Wallets', 'Purses', 'Backpacks', 'Bags', 'Accesories'];
