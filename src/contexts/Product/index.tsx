@@ -38,7 +38,6 @@ export default function ProductsProvider({ children }: { children: ReactNode }) 
   const [singleProduct, setSingleProduct] = useState<Product>(DEFAULT_PRODUCT);
 
   const handleSortProducts = (sortingType: number) => {
-    console.log(sortingType);
     if (allProducts.length) {
       setProducts([...sortProducts(allProducts, sortingType), DEFAULT_PRODUCT]);
       setProducts((prevState) => prevState.filter((item) => item !== DEFAULT_PRODUCT));
