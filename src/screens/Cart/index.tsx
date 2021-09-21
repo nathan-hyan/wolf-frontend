@@ -17,7 +17,9 @@ function Cart() {
   const { handleSubmit, control } = useForm();
   const { t } = useTranslation('Cart');
   const requiredItem = <p className={styles.required}>*</p>;
-  const onSubmit: SubmitHandler<Info> = (info) => checkout(info);
+  const onSubmit: SubmitHandler<Info> = (info) => {
+    checkout(info);
+  };
 
   const NUMBER_VALIDATION = { min: 999999999, max: 9999999999999 };
 

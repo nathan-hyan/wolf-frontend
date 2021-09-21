@@ -10,7 +10,7 @@ interface Props {
   product: Product;
 }
 
-function Comments({ product: { comments, _id } }: Props) {
+function Comments({ product: { comments, _id, name } }: Props) {
   const { t } = useTranslation('Product');
 
   return (
@@ -19,7 +19,7 @@ function Comments({ product: { comments, _id } }: Props) {
         {t('leaveYourComment')}
         :
       </h1>
-      <CommentBox id={_id!} />
+      <CommentBox id={_id!} name={name} />
       {comments.length && (
         <>
           <h1 className={styles.title}>
