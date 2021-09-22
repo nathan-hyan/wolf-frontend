@@ -51,7 +51,7 @@ export default function CartProvider({ children }: { children: ReactNode }) {
       try {
         const PRODUCTS = buildProductOutput(productList, product, quantity);
         setProductList(PRODUCTS);
-        trackGA(GACartActions.AddedProduct, `${product.name}, cantidad: ${quantity}`);
+        trackGA(GACartActions.AddedProduct, `${product.name}`);
         removeModal(true);
       } catch (err) {
         removeModal(false);
