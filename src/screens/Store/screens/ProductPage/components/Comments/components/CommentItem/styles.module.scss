@@ -1,6 +1,7 @@
 @import 'scss/colors';
 @import 'scss/variables';
 @import 'scss/mixins';
+@import 'include-media';
 
 .container {
   @include flex(flex-start, flex-start, column);
@@ -12,6 +13,12 @@
   line-height: 20px;
   max-width: 70%;
   word-break: break-word;
+
+  @include media('<=tablet') {
+    width: 100%;
+    max-width: none;
+    min-width: none;
+  }
 }
 
 .timestamp {

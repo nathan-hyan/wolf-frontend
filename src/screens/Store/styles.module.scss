@@ -17,8 +17,6 @@
   @include media('<=425px') {
     @include flex(flex-start, center, column);
 
-    text-align: center;
-
     .noItemsTitle {
       line-height: normal;
     }

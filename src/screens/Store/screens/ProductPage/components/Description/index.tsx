@@ -11,6 +11,7 @@ import CustomModal from 'components/CustomModal';
 import paths from 'components/Routes/paths';
 import FormInput from 'components/FormInput';
 
+import { notify } from 'react-notify-toast';
 import Carousel from './components/Carousel';
 import styles from './styles.module.scss';
 
@@ -26,7 +27,11 @@ function Description({ product }: Props) {
   const [quantity, setQuantity] = useState(1);
 
   const handleAddToCart = () => {
-    addProductToCart(product, quantity);
+    if (quantity > product.stock) {
+      notify.show(t('notEnoughStock'), 'error');
+    } else {
+      addProductToCart(product, quantity);
+    }
   };
 
   const handleGoToCart = () => {
