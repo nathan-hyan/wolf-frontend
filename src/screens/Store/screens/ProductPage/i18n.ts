@@ -21,6 +21,7 @@ i18next.addResources('es', 'Product', {
   availableStock_plural: 'Stock actual: {{count}} productos',
   minTextError: 'El comentario debe tener 30 caracteres como mínimo',
   maxTextError: 'El comentario debe tener menos de 250 caracteres',
+  notEnoughStock: 'La cantidad ingresada no debe superar el stock actual',
 });
 
 i18next.addResources('en', 'Product', {
@@ -44,4 +45,5 @@ i18next.addResources('en', 'Product', {
   availableStock_plural: 'Current stock: {{count}} products',
   minTextError: 'The comment must have 30 characters minimun',
   maxTextError: 'No more than 250 characters allowed',
+  notEnoughStock: 'The quantity entered must not exceed the current stock',
 });
